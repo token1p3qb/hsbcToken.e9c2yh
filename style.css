@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+
+/* MENU */
+
+.menu-bg{
+    background: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
+    position: fixed;
+    width: 100%;
+    z-index: 5; /* SOBRE POSIÇÃO DE ELEMENTOS*/
+}
+@media (max-width: 800px){
+    .menu-bg{
+        position: relative;
+    }
+}
+.menu{
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 90px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.menu-logo img{
+    max-width: 85px;
+}
+.menu-logo, .menu-nav, .menu-nav2{
+    padding: 10px 0;
+}
+.menu-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.menu-nav2 ul{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.menu-nav ul li{
+    padding: 0 20px;
+}
+.menu-nav2 ul li{
+    padding: 0 20px;
+}
+.menu-nav a, .menu-nav2 a{
+    font-size: 1.1em;
+    color: inherit;
+    font-weight: 300;
+}
+.menu-nav2 a{
+    font-weight: 400;
+}
+.menu-nav2 li:nth-child(2){
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+.botao-menu{
+    display: none;
+}
+.botao-menu ul{
+    display: none;
+}
+@media (max-width: 800px){
+    .menu-nav, .menu-nav2{
+        display: none;
+    }
+    .botao-menu{
+        display: block;
+        cursor: pointer;
+    }
+    .botao-menu > div{
+        content: '';
+        margin: 5px;
+        width: 30px;
+        height: 4px;
+        background: #616161;
+        border-radius: 5px;
+    }
+}
+
+/* BACKGROUND-IMAGE */
+
+.bg-img{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+}
+.bg-img{
+    background-image: url(imagens/hero.jpg);
+    background-position: center;
+    background-size: cover;
+}
+@media (max-width: 800px){
+    .bg-img{
+        box-shadow: inset 0px -200px 20px black;
+    }
+}
+.bg-img-text h1{
+    color: white;
+    font-weight: 200;
+    font-size: 3.9em;
+    flex: 1;
+}
+.bg-img-text button{
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 15px 20px;
+    background: none;
+    font-size: 1.25em;
+    margin-top: 20px;
+    flex: 1;
+}
+.bg-img-text button:hover{
+    background-color: rgba(255, 255, 255, 0.233);
+}
+.bg-img-text button a{
+    color: white;
+}
+
+/* HIGHLIGHT */
+
+.highlight-bg{
+    background: #f4f5f6;
+    padding-bottom: 20px;
+}
+.highlight-bg h1{
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+    padding: 100px;
+}
+.highlight{
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto ;
+}
+.high-item{
+    border-left: 1px solid rgb(116, 116, 116);
+    padding: 30px;
+    flex: 1;
+    margin: 0 90px;
+    
+}
+.high-item h2, span, p{
+    padding: 20px 0;
+}
+.high-item h2{
+    font-weight: 200;
+    font-size: 4rem;
+}
+.highlight-bg button{
+    display: block;
+    margin: 60px auto;
+    padding: 20px 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: none;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+/* SUPORTING */
+
+.sup-bg h1{
+    margin: 100px 0px 40px 0px;
+    padding: 30px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 300;
+}
+.sup-container{
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.sup-item{
+    flex: 1;
+    margin: 0 15px;
+    margin-bottom: 20px;
+}
+.sup-item img{
+    width: 100%;
+}
+.sup-content{
+    background: #f4f5f6;
+    padding: 30px 60px;
+    text-align: justify;
+    height: 270px;
+}
+.sup-content > h2 {
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 2em;
+}
+.sup-content > p:nth-child(2) {
+    margin-bottom: 10px;
+}
+.sup-content button{
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+.sup-content button:hover{
+    margin-left: 20px;
+    transition: 0.25s;
+}
+.sup-content a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+.sup-content a span{
+    font-weight: 300;
+}
+.sup-content a:hover{
+    text-decoration: underline;
+}
+
+/* INSIGHT */
+
+section.insight-bg{
+    background: #f4f5f6;
+    margin-top: 80px;
+    padding: 90px 60px;
+}
+.insight-bg h1{
+    text-align: center;
+    font-weight: 300;
+    font-size: 3em;
+    padding: 30px;
+    
+}
+.insight{
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+    padding-bottom: 110px;
+}
+
+.insight-item{
+    flex: 1;
+    margin: 0 15px;
+    margin-bottom: 20px;
+}
+.insight-content{
+    background: white;
+    padding: 15px 30px; 
+    text-align: left;
+    height: 400px;
+}
+.insight-content > h2, p, button{
+    margin-bottom: 30px;
+}
+.insight-content > button{
+    margin-top: 30px;
+}
+.insight-content h2{
+    font-size: 2em;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.insight-content button{
+    padding: 20px;
+    border: none;
+    background: none;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+.insight-content button:hover{
+    margin-left: 20px;
+    transition: 0.25s;
+}
+.insight-bg > button{
+    display: block;
+    margin: 0 auto;
+    padding: 20px 40px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.insight-bg > button:hover{
+    background: rgba(238, 238, 238, 0.685);
+}
+section.scroll{
+    display: flex;
+}
+.bg-img2{
+    background-image: url(https://www.hsbc.com/-/files/hsbc/who-we-are/banner-images/210223-our-values-and-purpose-1600x900-v3.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 130px;
+    flex: 1;
+}
+.scroll{
+    overflow-x: hidden;
+}
+.bg-img2-item{
+    background: #647987;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    width: 550px;
+    height: 480px;
+    bottom: -180px;
+    left: 80px;
+    color: white;
+    flex-shrink: 1;
+}
+.bg-img2-item h2, p, button{
+    margin: 0px;
+    padding: 0px;
+}
+.bg-img2-item h2{
+    font-size: 2.8em;
+    font-weight: 300;
+}
+.bg-img2-item p{
+    font-size: 1.20em;
+}
+.bg-img2-item > button{
+    display: block;
+    margin: 0 auto;
+    padding: 20px 40px;
+    border: 1px solid white;
+    border-radius: 3px;
+    background: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.bg-img2-item button:hover{
+    background-color: rgba(255, 255, 255, 0.233);
+}
+
+
+/* PROMO */
+
+section.promo{
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+}
+@media (max-width: 800px){
+    .promo{
+        flex-direction: column;
+    }
+}
+.promo-item{
+    flex: 1;
+    margin: 0 15px;
+}
+.promo-content{
+    background: #f4f5f6;
+    padding: 15px 30px;
+    height: 320px; 
+}
+.promo-content > h2, p{
+    margin-bottom: 30px;
+}
+.promo-content > button{
+    margin-top: 10px;
+}
+.promo-content h2{
+    font-size: 2em;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.promo-content button{
+    padding: 20px;
+    border: none;
+    background: none;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+.promo-content button:hover{
+    margin-left: 20px;
+    transition: 0.25s;
+}
+section.scroll{
+    display: flex;
+}
+.bg-img3{
+    background-image: url(https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2021/3q/images/211025-students-and-graduates-1600x900.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 190px;
+    margin-top: 90px;
+    flex: 1;
+}
+.bg-img3-item{
+    background: #647987;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    width: 550px;
+    height: 480px;
+    bottom: -220px;
+    left: calc(50% + 10px);
+    color: white;
+    flex-shrink: 1;
+    
+}
+.bg-img3-item h2, p, button{
+    margin: 0px;
+    padding: 0px;
+}
+.bg-img3-item h2{
+    font-size: 2.8em;
+    font-weight: 300;
+}
+.bg-img3-item p{
+    font-size: 1.20em;
+}
+.bg-img3-item > button{
+    display: block;
+    margin: 0 auto;
+    padding: 20px 40px;
+    border: 1px solid white;
+    border-radius: 3px;
+    background: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.bg-img3-item button:hover{
+    background-color: rgba(255, 255, 255, 0.233);
+}
+
+/* FOOTER */
+
+footer{
+    background: #1e1e1e;
+}
+.rodape{
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+footer ul{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.navegacao li{
+    max-width: 1240px;
+    padding: 40px 30px;
+    font-size: 1.25em;
+    font-weight: 300;
+}
+.navegacao a{
+    color: white;
+}
+.icones li{
+    margin: 30px;
+    margin-top: 50px;
+}
+.icones li svg{
+    width: 40px;
+    height: 40px;
+}
+.navegacao2{
+    background: #151515;
+    margin-left: -50px;
+    margin-right: -35px;
+    flex: 1;
+}
+.navegacao2 li{
+    max-width: 1240px;
+    padding: 40px 20px;
+    font-size: .75em;
+    font-weight: 300;
+}
+.navegacao2 a{
+    color: white;
+}
